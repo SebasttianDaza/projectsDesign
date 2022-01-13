@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --color-darkblue: #1b1b32;
+    --color-white: #fff;
+}
+
+body {
+    display: flex;
+    margin: 2rem;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(155deg, rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)),
+      url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    width: 100%;
+}
+
+/* Header */
+#title {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#description {
+    font-size: 1rem;
+    color: var(--color-white);
+    font-weight: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Form */
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b2b4dc0;
+    border-radius: .3rem;
+    padding: 3rem;
+    color: var(--color-white);
+    width: 45rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+    line-height:2;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: var(--color-white);
+    margin-bottom: .5rem;
+}
+
+/* Inputs Text, Email, Number, Textarea*/
+
+.form-group [type="text"], [type="email"], [type="number"], [id="textarea"] {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: .3rem;
+    border: none;
+    background-clip: padding-box;
+}
+
+.form-group [type="text"]::placeholder, [type="email"]::placeholder, [type="number"]::placeholder, [id="textarea"]::placeholder {
+    color: rgb(43, 35, 35);
+    padding-left: .6rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group [type="text"]:read-write, [type="email"]:read-write, [type="number"]:read-write, [id="textarea"]:read-write {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding-left: .6rem;
+}
+
+.form-group [type="text"]:focus, [type="email"]:focus, [type="number"]:focus, [id="textarea"]:focus {
+    outline: none;
+}
+
+/* TexTarea */
+
+#textarea:read-write {
+    height: 10rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    padding-right: .6rem;
+}
+
+/* Inputs Drop */
+
+[id="dropdown"], [id="dropdown1"] {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: .3rem;
+    border: none;
+    background-clip: padding-box;
+    color: rgb(43, 35, 35);
+    padding-left: .6rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+
+[class="option"]:focus, [id="dropdown1"]:focus {
+    outline: none;
+}
+
+/* Radios */
+
+.grop {
+    display: flex;
+    flex-direction: column;
+}
+
+.grop input {
+    margin-right: .5rem;
+    border: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Checbox */
+
+.grap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.grap input {
+    margin-right: .5rem;
+    border: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Buttion */
+
+#submit {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: .3rem;
+    border: none;
+    background-color:#37AF65 ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--color-white);
+}
