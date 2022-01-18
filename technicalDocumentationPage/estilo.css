@@ -15,6 +15,11 @@ html, body {
     color: var(--color-text);
     background-color: var(--background-color);
 }
+@media (max-width: 741px) {
+    #main-doc {
+        overflow-x: hidden;
+    }
+}
 
 #principal {
     display: grid;
@@ -89,6 +94,7 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 1.5rem;
+    line-height: 1.5rem;
 }
 
 .main-section header h2 {
@@ -103,3 +109,20 @@ html, body {
     color: var(--color-text);
 }
 
+.main-section header ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    line-height: 1.5rem;
+}
+.main-section header ul li {
+    margin-left: 3rem;
+}
+
+.main-section header code {
+    margin-left: 1rem;
+    background-color: #F7F7F7;
+    padding: 1rem;
+    border-radius: .5rem;
+}
